@@ -68,7 +68,7 @@ describe('Android Elements Tests',()=>{
     ///  - Use $$ to access multiple elements
     ///  - Example: 
     ///     Loop through elements to get text
-    it.only('Find multiple elements', async () =>{
+    it('Find multiple elements', async () =>{
         const expectedList = [
             'API Demos',
             "Access'ibility",
@@ -95,6 +95,16 @@ describe('Android Elements Tests',()=>{
         await expect(actualList).toEqual(expectedList);
     });    
 
+
+    it.only('Working with Text Input Field', async () =>{
+        await $('~Views').click();
+        await $('~Auto Complete').click();
+        await $('~1. Screen Top').click();
+        const textInputField = await $('//android.widget.EditText[@resource-id="io.appium.android.apis:id/edit"]');
+        await textInputField.click();
+        await textInputField.addValue('Canada');
+        await expect(textInputField).toHaveText('Canada');
+    });  
 });
 
 
