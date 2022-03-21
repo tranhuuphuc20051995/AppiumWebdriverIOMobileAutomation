@@ -2,7 +2,7 @@ describe('Android Elements Tests',()=>{
     ///  Acessibility ID:
     ///  - Crossplatform compatibility
     ///  - Preferred option
-    it('Find element by accessibility Id', async () => {
+    it.skip('Find element by accessibility Id', async () => {
         // find element by accessibility Id
         const appOption = await $('~App');
 
@@ -21,7 +21,7 @@ describe('Android Elements Tests',()=>{
     ///  - Ex: TextView, Button, Layout
     /// it.only() is Indicates this test should be executed exclusively. 
     /// - Chỉ chạy 1 mình nó. Không chạy những test khác
-    it('Find element by class name/tag name', async () => {
+    it.skip('Find element by class name/tag name', async () => {
         // find element by class name
         const className = $('android.widget.TextView');
 
@@ -37,7 +37,7 @@ describe('Android Elements Tests',()=>{
     ///  - Go to Selector after Acessibility ID
     ///  - Dynamic & Flexibel :heavy_check_mark:
     ///  - Long & Difficult to read :x:
-    it('Find element by XPath', async () =>{
+    it.skip('Find element by XPath', async () =>{
         /// Find element by xpath => (//tagname[@attribute=value])
         /// attribute == { content-desc || resource-id || text || ... }
         /// tagname == { android.widget.TextView || android.widget.Button || ... }   
@@ -56,7 +56,7 @@ describe('Android Elements Tests',()=>{
     ///     https://webdriver.io/docs/selectors/#android-uiautomator
     ///     https://developer.android.com/reference/androidx/test/uiautomator/UiSelector
     ///     https://appium.io/docs/en/writing-running-appium/android/uiautomator-uiselector/
-    it('Find element by Android UIAutomator', async () =>{
+    it.skip('Find element by Android UIAutomator', async () =>{
         /// Find element by Android UIAutomator -> textContains
         await $('android=new UiSelector().textContains("App")').click(); 
 
@@ -68,7 +68,7 @@ describe('Android Elements Tests',()=>{
     ///  - Use $$ to access multiple elements
     ///  - Example: 
     ///     Loop through elements to get text
-    it('Find multiple elements', async () =>{
+    it.skip('Find multiple elements', async () =>{
         const expectedList = [
             'API Demos',
             "Access'ibility",
@@ -96,7 +96,7 @@ describe('Android Elements Tests',()=>{
     });    
 
 
-    it.only('Working with Text Input Field', async () =>{
+    it.skip('Working with Text Input Field', async () =>{
         await $('~Views').click();
         await $('~Auto Complete').click();
         await $('~1. Screen Top').click();
