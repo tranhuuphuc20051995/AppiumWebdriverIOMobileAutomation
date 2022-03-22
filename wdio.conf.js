@@ -24,7 +24,7 @@ exports.config = {
     // will be called from there.
     //
     specs: [
-        './test/specs/**/android-findElements.spec.js',
+        // './test/specs/**/android-findElements.spec.js',
         './test/specs/**/android-native.spec.js'
     ],
     // Patterns to exclude.
@@ -55,7 +55,7 @@ exports.config = {
     //
     capabilities: [{
         platformName: "Android",
-        "appium:platformVersion": "10.0",
+        "appium:platformVersion": '10.0',
         "appium:deviceName": "Pixel 4 API 29",
         "appium:automationName": "UIAutomator2",
         "appium:app": path.join(process.cwd(), "./app/android/ApiDemos-debug.apk"),
