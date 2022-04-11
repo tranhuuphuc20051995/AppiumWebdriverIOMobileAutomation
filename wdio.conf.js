@@ -55,8 +55,8 @@ exports.config = {
     //
     capabilities: [{
         platformName: "Android",
-        "appium:platformVersion": '10.0',
-        "appium:deviceName": "Pixel 4 API 29",
+        "appium:platformVersion": '6.0',
+        "appium:deviceName": "Pixel XL API 23",
         "appium:automationName": "UIAutomator2",
         "appium:app": path.join(process.cwd(), "./app/android/ApiDemos-debug.apk"),
     }],

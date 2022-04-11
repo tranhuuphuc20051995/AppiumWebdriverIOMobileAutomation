@@ -1,9 +1,9 @@
 # AppiumWebdriverIOMobileAutomation
 
-1. How to run test?
+1. How to run test? (Run Test)
    We can run test by using this command on terminal: npx wdio
 
-2. How to start appium server?
+2. How to start appium server? (Run before use Appium Inspector connect to appium server)
    We can start appium server by using this command on terminal: appium -p <port>
    Ex: appium -p 4724
 
@@ -11,8 +11,8 @@
 
    {
    "platformName": "Android",
-   "appium:platformVersion": "10",
-   "appium:deviceName": "Pixel 4 API 29",
+   "appium:platformVersion": "6.0",
+   "appium:deviceName": "Pixel XL API 23",
    "appium:app": "/Users/phuctranh/Desktop/LearnAppiumForMobileAutomationTest/app/android/ApiDemos-debug.apk",
    "automationName": "UIAutomator2"
    }
