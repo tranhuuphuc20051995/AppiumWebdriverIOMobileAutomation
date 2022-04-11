@@ -25,7 +25,8 @@ exports.config = {
     //
     specs: [
         // './test/specs/**/android-findElements.spec.js',
-        './test/specs/**/android-native.spec.js'
+        // './test/specs/**/android-native.spec.js'
+        './test/specs/android/*.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -58,7 +59,10 @@ exports.config = {
         "appium:platformVersion": '6.0',
         "appium:deviceName": "Pixel XL API 23",
         "appium:automationName": "UIAutomator2",
-        "appium:app": path.join(process.cwd(), "./app/android/ApiDemos-debug.apk"),
+        "appium:app": path.join(process.cwd(), "./app/android/ColorNote-Notepad.apk"),
+        /// Grant Permission for Android
+        /// Ref: https://www.browserstack.com/docs/app-automate/appium/advanced-features/handle-permission-pop-ups#nodejs
+        "appium:autoGrantPermissions": true,
     }],
     //
     // ===================
