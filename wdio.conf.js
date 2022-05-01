@@ -62,7 +62,7 @@ exports.config = {
         "appium:app": path.join(process.cwd(), "./app/android/ColorNote-Notepad.apk"),
         /// Grant Permission for Android
         /// Ref: https://www.browserstack.com/docs/app-automate/appium/advanced-features/handle-permission-pop-ups#nodejs
-        "appium:autoGrantPermissions": true,
+        // "appium:autoGrantPermissions": true,
     }],
     //
     // ===================
