@@ -27,4 +27,39 @@ describe('Add Notes', () => {
         await expect($('//*[@resource-id="com.socialnmobile.dictapps.notepad.color.note:id/edit_btn"]')).toBeDisplayed();
         await expect($('//*[@resource-id="com.socialnmobile.dictapps.notepad.color.note:id/view_note"]')).toHaveText('Naruto\nOnePiece\nJAVA');
     });
+
+    it('Delete a note & check the note in trash can', async () => {
+        await driver.back();
+
+        const note = await $('//*[@resource-id="com.socialnmobile.dictapps.notepad.color.note:id/title"]').getText();
+
+        /// Click on the note
+        await $('//*[@resource-id="com.socialnmobile.dictapps.notepad.color.note:id/title"]').click();
+
+        /// Click on more icon
+        await $('~More').click();
+
+        /// Click on delete item
+        await expect($('//*[@text="Delete"]')).click();
+
+        /// Accept alert
+        await driver.acceptAlert();
+
+        /// Click on nav icon
+        await $('//*[@resource-id="com.socialnmobile.dictapps.notepad.color.note:id/icon_nav"]').click();
+
+        /// Click on trash can item
+        await expect($('//*[@text="Trash Can"]')).click();
+
+        /// Assertions
+        /// Solution 1: getText -> toEqual
+        // const trashCanItem = await $('//*[@resource-id="com.socialnmobile.dictapps.notepad.color.note:id/title"]').getText();
+        // await expect(trashCanItem).toEqual(note);
+
+
+        /// Solution 2: not getText -> toHaveText
+        const trashCanItem = await $('//*[@resource-id="com.socialnmobile.dictapps.notepad.color.note:id/title"]');
+        await expect(trashCanItem).toHaveText(note);
+
+    });
 });
