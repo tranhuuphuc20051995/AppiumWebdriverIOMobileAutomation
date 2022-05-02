@@ -16,3 +16,12 @@
    "appium:app": "/Users/phuctranh/Desktop/LearnAppiumForMobileAutomationTest/app/android/ApiDemos-debug.apk",
    "automationName": "UIAutomator2"
    }
+4. Config for iOS on Appium Inspector:
+   
+   {
+   "platformName": "ios",
+   "appium:platformVersion": "14.4",
+   "appium:automationName": "XCUITest",
+   "appium:app": "/Users/phuctranh/Desktop/LearnAppiumForMobileAutomationTest/app/ios/UIKitCatalog.app.zip",
+   "appium:deviceName": "iPhone 12"
+   }

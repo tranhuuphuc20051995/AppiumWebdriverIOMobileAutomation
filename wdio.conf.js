@@ -73,7 +73,7 @@ exports.config = {
     /// iOS
     {
       platformName: "ios",
-      "appium:platformVersion": "15.4",
+      "appium:platformVersion": "14.4",
       "appium:deviceName": "iPhone 12",
       "appium:automationName": "XCUITest",
       "appium:app": path.join(process.cwd(), "./app/ios/UIKitCatalog.app.zip"),
